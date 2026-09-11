@@ -3,131 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólió</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Tóth István - Portfólió</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
 
-    <!-- Fejléc -->
+    <!-- FEJLÉC -->
     <header>
-        <div class="logo">
-            <strong>Tóth István</strong>
-            <span>Junior webfejlesztő</span>
+
+    <div class="nev">
+        <h3>Tóth István</h3>
+        <p>Junior Webfejlesztő</p>
+    </div>
+
+    <nav>
+        <a href="#bemutatkozas">Bemutatkozás</a>
+        <a href="#keszsegek">Készségek</a>
+        <a href="#projektek">Projektek</a>
+        <a href="#kapcsolat">Kapcsolat</a>
+    </nav>
+
+</header>
+
+
+    <!-- BEMUTATKOZÁS -->
+    <section id="bemutatkozas" class="bemutatkozas">
+
+        <div class="profilkep">
+                <img src="/img/Ellipse 1.png"Tóth István">
         </div>
 
-        <nav>
-            <a href="#kezdooldal">Kezdőlap</a>
-            <a href="#kepessegek">Képességek</a>
-            <a href="#projektek">Projektek</a>
-            <a href="#kapcsolat">Kapcsolat</a>
-        </nav>
-    </header>
+        <div class="bemutatkozas-szoveg">
+            <p class="kis-szoveg">ÜDVÖZÖLLEK A PORTFÓLIÓMON</p>
+
+            <h1>Junior<br>Webfejlesztő</h1>
+
+            <p>
+                Kreatív és lelkes junior webfejlesztő vagyok.
+                Szeretek modern, letisztult és reszponzív
+                weboldalakat készíteni.
+            </p>
+
+            <a href="#projektek" class="gomb">
+                Projektjeim
+            </a>
+        </div>
+
+    </section>
 
 
-    <main id="kezdooldal">
+    <!-- KÉSZSÉGEK -->
+    <div class="keszsegek">
 
-        <!-- Bemutatkozó rész -->
-        <section class="me">
-            <div class="profilkep"></div>
+    <div class="kartya">
+        <img src="kepek/html.jpg" alt="HTML">
+        <h3>HTML</h3>
+        <p>Weboldalak felépítése és strukturálása.</p>
+    </div>
 
-            <div class="menu-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+    <div class="kartya">
+        <img src="kepek/css.jpg" alt="CSS">
+        <h3>CSS</h3>
+        <p>Modern dizájnok és reszponzív oldalak.</p>
+    </div>
+
+    <div class="kartya">
+        <img src="kepek/sql.jpg" alt="SQL">
+        <h3>SQL</h3>
+        <p>Adatbázisok kezelése és lekérdezése.</p>
+    </div>
+
+    <div class="kartya">
+        <img src="kepek/javascript.jpg" alt="JavaScript">
+        <h3>JavaScript</h3>
+        <p>Interaktív weboldalak készítése.</p>
+    </div>
+
+    <div class="kartya">
+        <img src="kepek/python.jpg" alt="Python">
+        <h3>Python</h3>
+        <p>Programozás és backend fejlesztés.</p>
+    </div>
+
+    <div class="kartya">
+        <img src="kepek/git.jpg" alt="Git">
+        <h3>Git</h3>
+        <p>Verziókezelés és projektmunka.</p>
+    </div>
+
+</div>
+
+    <!-- PROJEKTEK -->
+    <section id="projektek" class="szekcio projektek">
+
+        <div class="cim">
+            <p>REFERENCIÁK</p>
+            <h2>Projektjeim</h2>
+        </div>
+
+        <div class="projekt-grid">
+
+            <!-- 1. PROJEKT -->
+            <div class="projekt">
+
+                <div class="projekt-kep chat">
+
+                    <div class="chat-sidebar">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                    <div class="chat-main">
+                        <div class="uzenet bal"></div>
+                        <div class="uzenet jobb"></div>
+                        <div class="uzenet bal kicsi"></div>
+                    </div>
+
+                </div>
+
+                <div class="projekt-tartalom">
+
+                    <span class="cimke">WEBALKALMAZÁS</span>
+
+                    <h3>Chat alkalmazás</h3>
+
+                    <p>
+                        Egy modern chat alkalmazás, amelyben
+                        a felhasználók üzeneteket küldhetnek
+                        egymásnak.
+                    </p>
+
+                    <div class="technologiak">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>SQL</span>
+                    </div>
+
+                </div>
+
             </div>
-        </section>
 
 
-        <!-- Képességek -->
-        <section class="section" id="kepessegek">
-            <h2>Készségek</h2>
+            <!-- 2. PROJEKT -->
+            <div class="projekt">
 
-            <div class="skills">
+                <div class="projekt-kep webshop">
 
-                <div class="skill">
-                    <span>HTML</span>
+                    <div class="cipő">
+                        👟
+                    </div>
+
                 </div>
 
-                <div class="skill">
-                    <span>CSS</span>
-                </div>
+                <div class="projekt-tartalom">
 
-                <div class="skill">
-                    <span>JavaScript</span>
-                </div>
+                    <span class="cimke">WEBSHOP</span>
 
-                <div class="skill">
-                    <span>Python</span>
-                </div>
+                    <h3>Sneaker Shop</h3>
 
-                <div class="skill">
-                    <span>SQL</span>
-                </div>
+                    <p>
+                        Modern cipő webáruház, terméklistával,
+                        kategóriákkal és letisztult felülettel.
+                    </p>
 
-                <div class="skill">
-                    <span>Git</span>
+                    <div class="technologiak">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+
                 </div>
 
             </div>
-        </section>
+
+        </div>
+
+    </section>
 
 
-        <!-- Projektek -->
-        <section class="section projects" id="projektek">
-            <h2>Projektek</h2>
+    <!-- KAPCSOLAT -->
+    <section id="kapcsolat" class="szekcio kapcsolat">
 
-            <div class="project">
-                <div class="project-image"></div>
+        <div class="cim">
+            <p>KAPCSOLAT</p>
+            <h2>Dolgozzunk együtt</h2>
+        </div>
 
-                <div class="project-info">
-                    <h3>Címe</h3>
-                    <p>Rövid leírás</p>
-                </div>
+        <div class="kapcsolat-box">
+
+            <div>
+                <h3>Van egy projektötleted?</h3>
+
+                <p>
+                    Írj nekem és beszéljük meg,
+                    hogyan valósíthatjuk meg.
+                </p>
             </div>
 
-            <div class="project">
-                <div class="project-image"></div>
+            <a href="mailto:email@example.com" class="gomb">
+                Kapcsolat
+            </a>
 
-                <div class="project-info">
-                    <h3>Címe</h3>
-                    <p>Rövid leírás</p>
-                </div>
-            </div>
+        </div>
 
-            <div class="project">
-                <div class="project-image"></div>
-
-                <div class="project-info">
-                    <h3>Címe</h3>
-                    <p>Rövid leírás</p>
-                </div>
-            </div>
-
-        </section>
+    </section>
 
 
-        <!-- Kapcsolat -->
-        <section class="contact" id="kapcsolat">
-            <h2>footer</h2>
-
-            <p>e-mail cím</p>
-            <p>telefonszám</p>
-            <p>lakhely (város)</p>
-        </section>
-
-
-        <!-- Lábléc -->
-        <footer>
-            <h2>Lábléc</h2>
-
-            <div>© 2026 Saját név</div>
-            <div>Szoftverfejlesztő és tesztelő</div>
-        </footer>
-
-    </main>
+    <!-- LÁBLÉC -->
+    <footer>
+        <p>© 2026 Tóth István | Junior Webfejlesztő</p>
+    </footer>
 
 </body>
 </html>
