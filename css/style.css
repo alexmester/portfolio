@@ -1,3 +1,8 @@
+
+/* =========================
+   ALAPBEÁLLÍTÁSOK
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,15 +14,33 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     background-color: #050d15;
-    color: white;
+    color: #fff;
+    overflow-x: hidden;
+    
+    font-family: 'Poppins', sans-serif;
 }
 
 
+
+img {
+    max-width: 100%;
+}
+
 /* =========================
-   FEJLÉC
+   KÖZÖS SZÉLESSÉG
 ========================= */
+
+.nev,
+nav,
+.bemutatkozas,
+.szekcio,
+footer {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* =========================
    FEJLÉC
@@ -29,8 +52,6 @@ header {
     border-bottom: 1px solid #ddd;
 }
 
-/* NÉV - FELSŐ SOR */
-
 .nev {
     text-align: center;
     padding: 12px 0 8px;
@@ -40,78 +61,73 @@ header {
     color: #333;
     font-size: 14px;
     font-weight: normal;
-    margin: 0;
 }
 
 .nev p {
     color: #555;
     font-size: 11px;
-    margin: 2px 0 0;
+    margin-top: 2px;
 }
 
-
-/* MENÜ - KÜLÖN SOR */
+/* =========================
+   NAVIGÁCIÓ
+========================= */
 
 nav {
-    width: 100%;
-
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
 
-    gap: 35px;
-
-    padding: 8px 30px;
-
+    padding: 12px 30px;
     background-color: #d8d8d8;
 }
 
 nav a {
     color: #333;
-
     text-decoration: none;
-
-    font-size: 12px;
-
+    font-size: 13px;
     white-space: nowrap;
-
-    transition: 0.3s;
+    transition: color 0.3s;
 }
 
 nav a:hover {
     color: #ff5b2e;
 }
 
-
 /* =========================
    BEMUTATKOZÁS
 ========================= */
 
 .bemutatkozas {
-    max-width: 1200px;
+    width: calc(100% - 40px);
     min-height: 480px;
 
-    margin: 20px auto;
-    padding: 70px;
-
-    background-color: #0c1d2d;
-    border: 1px solid #1d3447;
-    border-radius: 10px;
+    margin: 25px auto;
+    padding: 60px;
 
     display: flex;
     align-items: center;
-    gap: 70px;
+    gap: 60px;
+
+    background-color: #0c1d2d;
+    border: 1px solid #1d3447;
+    border-radius: 15px;
 }
 
-
-/* profil */
+/* PROFILKÉP */
 
 .profilkep {
     width: 190px;
     height: 190px;
-
     min-width: 190px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 6px solid #193044;
     border-radius: 50%;
 
     background: linear-gradient(
@@ -120,20 +136,19 @@ nav a:hover {
         #62371f
     );
 
-    border: 6px solid #193044;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 50px;
-    font-weight: bold;
-
-    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+.profilkep img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .bemutatkozas-szoveg {
-    max-width: 600px;
+    max-width: 650px;
 }
 
 .kis-szoveg {
@@ -145,7 +160,7 @@ nav a:hover {
 
 .bemutatkozas h1 {
     font-size: 55px;
-    line-height: 1.05;
+    line-height: 1.1;
     margin: 12px 0 20px;
 }
 
@@ -156,19 +171,17 @@ nav a:hover {
     margin-bottom: 25px;
 }
 
-
-/* gomb */
+/* BEMUTATKOZÁS GOMB */
 
 .gomb {
     display: inline-block;
 
-    background-color: #ff5b2e;
-    color: white;
-
     padding: 13px 23px;
 
-    border-radius: 5px;
+    background-color: #ff5b2e;
+    color: #fff;
 
+    border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
 
@@ -177,23 +190,20 @@ nav a:hover {
 
 .gomb:hover {
     background-color: #ff764f;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
-
 /* =========================
-   SZEKCIÓ
+   ÁLTALÁNOS SZEKCIÓK
 ========================= */
 
 .szekcio {
-    max-width: 1100px;
-    margin: auto;
-    padding: 80px 30px;
+    padding: 70px 30px;
 }
 
 .cim {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 }
 
 .cim p {
@@ -205,9 +215,8 @@ nav a:hover {
 
 .cim h2 {
     font-size: 38px;
-    margin-top: 5px;
+    margin-top: 8px;
 }
-
 
 /* =========================
    KÉSZSÉGEK
@@ -215,130 +224,56 @@ nav a:hover {
 
 .keszsegek {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
-    margin: 0 30px;
 }
 
-.kartya {
-    background-color: #0c1d2d;
-    border: 1px solid #1d3447;
-    border-radius: 12px;
-    padding: 25px;
-    text-align: center;
-    transition: 0.3s ease;
+/* KÉSZSÉG KÁRTYÁK */
 
-    /* A kártyák magassága egységesebb lesz */
+.kartya {
+    min-width: 0;
     min-height: 220px;
 
-    /* Tartalom középre igazítása */
+    padding: 25px 20px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    text-align: center;
+
+    background-color: #0c1d2d;
+    border: 1px solid #1d3447;
+    border-radius: 12px;
+
+    transition: 0.3s ease;
 }
 
 .kartya:hover {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
     border-color: #3c5870;
     background-color: #10263a;
 }
 
-/* MINDEN KÉP UGYANAKKORA LESZ */
 .kartya img {
     width: 80px;
     height: 80px;
-
     object-fit: contain;
-
     margin-bottom: 15px;
 }
 
-/* Cím */
 .kartya h3 {
+    color: #fff;
     font-size: 20px;
-    margin: 0 0 8px;
-    color: white;
+    margin-bottom: 8px;
 }
 
-/* Leírás */
 .kartya p {
     color: #8e9ca8;
     font-size: 13px;
     line-height: 1.6;
-    margin: 0;
 }
-
-
-/* LOGÓK */
-
-.html-logo,
-.css-logo,
-.sql-logo,
-.js-logo,
-.python-logo,
-.git-logo {
-
-    width: 80px;
-    height: 80px;
-
-    margin: auto;
-
-    border-radius: 15px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-weight: bold;
-    font-size: 28px;
-}
-
-
-/* HTML */
-
-.html-logo {
-    background-color: #e44d26;
-}
-
-
-/* CSS */
-
-.css-logo {
-    background-color: #2865f0;
-}
-
-
-/* SQL */
-
-.sql-logo {
-    background-color: #147bbd;
-    font-size: 20px;
-}
-
-
-/* JS */
-
-.js-logo {
-    background-color: #e9c72c;
-    color: #111;
-}
-
-
-/* Python */
-
-.python-logo {
-    background-color: #3975a5;
-    font-size: 38px;
-}
-
-
-/* Git */
-
-.git-logo {
-    background-color: #e94b2f;
-}
-
 
 /* =========================
    PROJEKTEK
@@ -346,115 +281,73 @@ nav a:hover {
 
 .projekt-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 25px;
+
+    margin-bottom: 50px;
 }
 
 .projekt {
+    min-width: 0;
+box-shadow: 0 8px 20px rgba(60, 88, 112, 0.5);
+
     background-color: #0c1d2d;
-
     border: 1px solid #1d3447;
+    border-radius: 12px;
 
-    border-radius: 10px;
+    overflow: hidden;
+
+    transition: border-color 0.3s;
+}
+
+.projekt:hover {
+    border-color: #3c5870;
+}
+
+/* PROJEKT KÉPEK */
+
+.projekt-kep {
+    width: 100%;
+    height: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     overflow: hidden;
 }
 
-
-/* projekt kép */
-
-.projekt-kep {
-    height: 230px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.projekt-kep img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-
-/* CHAT */
+/* =========================
+   CHAT PROJEKT
+========================= */
 
 .chat {
     height: 300px;
-    background-color: #102a3e;
-    overflow: hidden;
+    padding: 25px;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 12px;
+
+    background-color: #102a3e;
+    overflow: hidden;
 }
 
 .chat img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    display: block;
 }
 
-.chat {
-    background-color: #102a3e;
-
-    padding: 30px;
-
-    display: flex;
-    gap: 12px;
-}
-
-.chat-sidebar {
-    width: 28%;
-    height: 100%;
-
-    background-color: #183c57;
-
-    border-radius: 7px;
-
-    padding: 20px 10px;
-}
-
-.chat-sidebar div {
-    height: 15px;
-    background-color: #315a74;
-
-    border-radius: 10px;
-
-    margin-bottom: 12px;
-}
-
-.chat-main {
-    flex: 1;
-
-    background-color: #081b2b;
-
-    border-radius: 7px;
-
-    padding: 30px 15px;
-}
-
-.uzenet {
-    width: 65%;
-    height: 22px;
-
-    border-radius: 15px;
-
-    background-color: #315875;
-
-    margin-bottom: 12px;
-}
-
-.uzenet.jobb {
-    margin-left: auto;
-    background-color: #ff5b2e;
-}
-
-.uzenet.kicsi {
-    width: 45%;
-}
-
-
-/* WEBSHOP */
+/* =========================
+   WEBSHOP PROJEKT
+========================= */
 
 .webshop {
     background: linear-gradient(
@@ -469,8 +362,9 @@ nav a:hover {
     transform: rotate(-15deg);
 }
 
-
-/* projekt szöveg */
+/* =========================
+   PROJEKT SZÖVEG
+========================= */
 
 .projekt-tartalom {
     padding: 28px;
@@ -478,11 +372,8 @@ nav a:hover {
 
 .cimke {
     color: #ff6438;
-
     font-size: 11px;
-
     letter-spacing: 2px;
-
     font-weight: bold;
 }
 
@@ -493,130 +384,430 @@ nav a:hover {
 
 .projekt p {
     color: #909eaa;
-
     font-size: 14px;
-
     line-height: 1.7;
 }
 
 .technologiak {
     display: flex;
     flex-wrap: wrap;
-
     gap: 7px;
-
     margin-top: 18px;
 }
 
 .technologiak span {
-    border: 1px solid #294154;
-
-    border-radius: 20px;
-
     padding: 5px 10px;
 
+    color: #bdc9d2;
     font-size: 11px;
 
-    color: #bdc9d2;
+    border: 1px solid #294154;
+    border-radius: 20px;
 }
 
-/* DUNGEON ESCAPE */
+/* =========================
+   DUNGEON ESCAPE
+========================= */
 
 .dungeon {
-    height: 230px;
-    background-color: #071421;
+    width: 100%;
+    height: 430px;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
+    background-color: #071421;
     overflow: hidden;
 }
 
 .dungeon img {
     width: 100%;
     height: 100%;
+    object-fit: contain;
 
-    object-fit: cover;
-
-    transition: 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .projekt:hover .dungeon img {
     transform: scale(1.03);
 }
 
-.projekt-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-
-    margin-bottom: 80px;
-}
-
-
 /* =========================
    KAPCSOLAT
 ========================= */
 
+#kapcsolat {
+    max-width: 1200px;
+    width: 100%;
+
+    margin: 0 auto;
+    padding: 30px;
+}
+
 .kapcsolat-box {
-    background-color: #0c1d2d;
+    width: 100%;
+    min-height: 665px;
 
-    border: 1px solid #1d3447;
-
-    border-radius: 10px;
-
-    padding: 40px;
+    padding: 30px 75px 15px;
 
     display: flex;
+    flex-direction: column;
 
-    justify-content: space-between;
-
-    align-items: center;
-
-    gap: 30px;
+    background-color: #0c1d2d;
+    border: 1px solid #1d3447;
+    border-radius: 20px;
 }
 
-.kapcsolat-box h3 {
-    font-size: 27px;
+/* KAPCSOLAT FEJLÉC */
 
-    margin-bottom: 7px;
+.kapcsolat-fejlec h2 {
+    color: #f4f5f6;
+    font-size: 36px;
+    margin-bottom: 12px;
 }
 
-.kapcsolat-box p {
-    color: #909eaa;
+.kapcsolat-fejlec p {
+    color: #94a3b8;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 38px;
 }
 
+/* ŰRLAP */
+
+.kapcsolat-form {
+    width: 100%;
+}
+
+.mezo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 28px;
+}
+
+.mezo label {
+    color: #d1d9e2;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.mezo input {
+    width: 100%;
+    height: 59px;
+    padding: 0 22px;
+
+    background-color: #1c2b40;
+    border: 1px solid #304258;
+    border-radius: 11px;
+
+    color: #fff;
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+.mezo input::placeholder {
+    color: #64748b;
+}
+
+.mezo input:focus {
+    border-color: #ff6438;
+    background-color: #203249;
+}
+
+/* KÜLDÉS GOMB */
+
+.kuldes {
+    display: flex;
+    justify-content: center;
+
+    margin: 30px 0 50px;
+}
+
+.kuldes button {
+    padding: 12px 30px;
+
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 7px;
+
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.kuldes button:hover {
+    background-color: #ff5b2e;
+    border-color: #ff5b2e;
+}
 
 /* =========================
-   FOOTER
+   LÁBLÉC
 ========================= */
 
 footer {
+    padding: 25px;
     text-align: center;
 
     border-top: 1px solid #1d3447;
 
-    padding: 25px;
-
     color: #657582;
-
     font-size: 12px;
 }
 
 /* =========================
-telefon nézet
+   TABLET ÉS KISEBB NÉZET
+   800 PX ALATT
 ========================= */
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+
+    /* NAVIGÁCIÓ */
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    /* BEMUTATKOZÁS */
+
+    .bemutatkozas {
+        width: calc(100% - 30px);
+        min-height: auto;
+
+        margin: 15px auto;
+        padding: 40px 25px;
+
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        gap: 30px;
+    }
+
+    .bemutatkozas-szoveg {
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .bemutatkozas h1 {
+        font-size: 42px;
+    }
+
+    /* KÉSZSÉGEK */
+
+    .keszsegek {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 25px 20px;
+    }
+
+    /* PROJEKTEK */
+
+    .projekt-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* KAPCSOLAT */
+
+    #kapcsolat {
+        padding: 20px;
+    }
+
+    .kapcsolat-box {
+        padding: 35px 40px 20px;
+    }
+
+    .kapcsolat-fejlec h2 {
+        font-size: 32px;
+    }
+}
+
+/* =========================
+   TELEFON NÉZET
+   600 PX ALATT
+========================= */
+
+@media (max-width: 600px) {
+
+    /* FEJLÉC */
+
+    .nev {
+        padding: 15px 10px;
+    }
+
+    nav {
+        gap: 12px;
+        padding: 15px 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    /* BEMUTATKOZÁS */
+
+    .bemutatkozas {
+        padding: 30px 20px;
+        gap: 25px;
+    }
+
+    .profilkep {
+        width: 140px;
+        height: 140px;
+        min-width: 140px;
+    }
+
+    .bemutatkozas h1 {
+        font-size: 34px;
+    }
+
+    .bemutatkozas-szoveg > p:not(.kis-szoveg) {
+        font-size: 14px;
+    }
+
+    /* SZEKCIÓK */
+
+    .szekcio {
+        padding: 50px 15px;
+    }
+
+    .cim {
+        margin-bottom: 30px;
+    }
+
+    .cim h2 {
+        font-size: 30px;
+    }
+
+    /* KÉSZSÉGEK */
+
     .keszsegek {
         grid-template-columns: 1fr;
-        gap: 15px;  
-         margin: 0 30px;
+        gap: 15px;
+        padding: 25px 20px;
     }
 
     .kartya {
-        min-height: 200px;
-        padding: 25px;
+        min-height: 190px;
+        padding: 25px 20px;
+    }
+
+    /* PROJEKTEK */
+
+    .projekt-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .projekt-kep {
+        height: 220px;
+    }
+
+    .projekt-tartalom {
+        padding: 22px;
+    }
+
+    .projekt h3 {
+        font-size: 22px;
+    }
+
+    /* CHAT */
+
+    .chat {
+        height: 220px;
+        padding: 12px;
+        gap: 8px;
+    }
+
+    /* DUNGEON */
+
+    .dungeon {
+        height: 250px;
+    }
+
+    .cipő {
+        font-size: 70px;
+    }
+
+    /* KAPCSOLAT */
+
+    #kapcsolat {
+        padding: 15px;
+    }
+
+    .kapcsolat-box {
+        min-height: auto;
+        padding: 30px 20px 15px;
+        border-radius: 15px;
+    }
+
+    .kapcsolat-fejlec h2 {
+        font-size: 27px;
+    }
+
+    .kapcsolat-fejlec p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .mezo {
+        margin-bottom: 22px;
+    }
+
+    .mezo label {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .mezo input {
+        height: 52px;
+        padding: 0 15px;
+        font-size: 14px;
+    }
+
+    .kuldes {
+        margin: 25px 0 35px;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+}
+
+/* =========================
+   KISEBB TELEFON
+   380 PX ALATT
+========================= */
+
+@media (max-width: 380px) {
+
+    .bemutatkozas h1 {
+        font-size: 29px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .dungeon {
+        height: 200px;
+    }
+
+    .chat {
+        height: 190px;
     }
 }
